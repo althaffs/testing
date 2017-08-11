@@ -1,0 +1,3 @@
+usr/include/artik/bluetooth/*
+usr/lib/pkgconfig/libartik-sdk-bluetooth.pc
+usr/lib/libartik-sdk-bluetooth.so

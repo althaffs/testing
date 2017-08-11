@@ -1,0 +1,3 @@
+usr/include/artik/sensor/*
+usr/lib/pkgconfig/libartik-sdk-sensor.pc
+usr/lib/libartik-sdk-sensor.so

@@ -1,0 +1,3 @@
+usr/include/artik/media/*
+usr/lib/pkgconfig/libartik-sdk-media.pc
+usr/lib/libartik-sdk-media.so

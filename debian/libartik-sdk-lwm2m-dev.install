@@ -1,0 +1,3 @@
+usr/include/artik/lwm2m/*
+usr/lib/pkgconfig/libartik-sdk-lwm2m.pc
+usr/lib/libartik-sdk-lwm2m.so

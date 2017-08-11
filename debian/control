@@ -1,0 +1,159 @@
+Source: artik-sdk
+Section: libs
+Priority: optional
+Maintainer: Gregory Lemercier <g.lemercier@samsung.com>
+Uploaders: Chanho Park <chanho61.park@samsung.com>
+Build-Depends: debhelper (>=9),
+	cmake,
+	libcurl4-openssl-dev,
+	libglib2.0-dev,
+	libgstreamer1.0-dev,
+	libxml2-dev,
+	libwebsockets-dev,
+	libmosquitto-dev,
+	wakaama-client-dev,
+	libssl-dev,
+	libcunit1-dev,
+Standards-Version: 3.9.6
+Homepage: https://artik.io
+
+Package: libartik-sdk-base
+Architecture: any-arm arm64
+Depends: ${shlibs:Depends}, ${misc:Depends}
+	libglib2.0-0
+Description: Base package needed by all the other packages of the SDK
+
+Package: libartik-sdk-base-dev
+Architecture: any
+Depends: libartik-sdk-base
+Description: Files needed for building applications against the ARTIK SDK Base library
+
+Package: libartik-sdk-systemio
+Architecture: any-arm arm64
+Depends: ${shlibs:Depends}, ${misc:Depends},
+	libartik-sdk-base
+Description: System IO package containing APIs for communicating over hardware busses (GPIO, SPI, I2C, etc...)
+
+Package: libartik-sdk-systemio-dev
+Architecture: any
+Depends: libartik-sdk-systemio,
+	libartik-sdk-base-dev
+Description: Files needed for building applications against the ARTIK SDK System IO library
+
+Package: libartik-sdk-connectivity
+Architecture: any-arm arm64
+Depends: ${shlibs:Depends}, ${misc:Depends},
+	libartik-sdk-base,
+	libwebsockets7 (>= 1.7),
+	libcurl3,
+Description: Connectivity package containing APIs for communicating over HTTP, websockets, etc...
+
+Package: libartik-sdk-connectivity-dev
+Architecture: any
+Depends: libartik-sdk-connectivity,
+	libartik-sdk-base-dev
+Description: Files needed for building applications against the ARTIK SDK Connectivity library
+
+Package: libartik-sdk-media
+Architecture: any-arm arm64
+Depends: ${shlibs:Depends}, ${misc:Depends},
+	libartik-sdk-base,
+	gstreamer1.0-plugins-base,
+	gstreamer1.0-plugins-good,
+Description: Media package containing APIs for handling audio/video streams
+
+Package: libartik-sdk-media-dev
+Architecture: any
+Depends: libartik-sdk-media,
+	libartik-sdk-base-dev
+Description: Files needed for building applications against the ARTIK SDK Media library
+
+Package: libartik-sdk-sensor
+Architecture: any-arm arm64
+Depends: ${shlibs:Depends}, ${misc:Depends},
+	libartik-sdk-base,
+Description: Sensor package containing APIs for handling data from various sensors
+
+Package: libartik-sdk-sensor-dev
+Architecture: any
+Depends: libartik-sdk-sensor,
+	libartik-sdk-base-dev
+Description: This package contains development files for building programs against the ARTIK SDK Sensor library
+
+Package: libartik-sdk-bluetooth
+Architecture: any-arm arm64
+Depends: ${shlibs:Depends}, ${misc:Depends},
+	libartik-sdk-base,
+	bluez (>= 5.39)
+Description: Package containing APIs for communicating with other devices over BT/BLE
+
+Package: libartik-sdk-bluetooth-dev
+Architecture: any
+Depends: libartik-sdk-bluetooth,
+	libartik-sdk-base-dev
+Description: Files needed for building applications against the ARTIK SDK Bluetooth library
+
+Package: libartik-sdk-wifi
+Architecture: any-arm arm64
+Depends: ${shlibs:Depends}, ${misc:Depends},
+	libartik-sdk-base,
+	wpasupplicant (>= 2.5)
+Description: Package containing APIs for scanning and connecting to Wifi networks
+
+Package: libartik-sdk-wifi-dev
+Architecture: any
+Depends: libartik-sdk-wifi,
+	libartik-sdk-base-dev
+Description: Files needed for building applications against the ARTIK SDK Wifi library
+
+Package: libartik-sdk-zigbee
+Architecture: any-arm arm64
+Depends: ${shlibs:Depends}, ${misc:Depends},
+	libartik-sdk-base,
+Description: Package containing APIs for communicating with other devices over Zigbee
+
+Package: libartik-sdk-zigbee-dev
+Architecture: any
+Depends: libartik-sdk-zigbee,
+	libartik-sdk-base-dev
+Description: Files needed for building applications against the ARTIK SDK Zigbee library
+
+Package: libartik-sdk-lwm2m
+Architecture: any-arm arm64
+Depends: ${shlibs:Depends}, ${misc:Depends},
+	libartik-sdk-base,
+	wakaama-client (>= 1.0)
+Description: Package containing APIs for communicating with other devices over LWM2M
+
+Package: libartik-sdk-lwm2m-dev
+Architecture: any
+Depends: libartik-sdk-lwm2m,
+	libartik-sdk-base-dev
+Description: Files needed for building applications against the ARTIK SDK LWM2M library
+
+Package: libartik-sdk-mqtt
+Architecture: any-arm arm64
+Depends: ${shlibs:Depends}, ${misc:Depends},
+	libartik-sdk-base,
+Description: Package containing APIs for communicating with other devices over MQTT
+
+Package: libartik-sdk-mqtt-dev
+Architecture: any
+Depends: libartik-sdk-mqtt,
+	libartik-sdk-base-dev
+Description: Files needed for building applications against the ARTIK SDK MQTT library
+
+Package: libartik-sdk-tests
+Architecture: any-arm arm64
+Depends: ${shlibs:Depends}, ${misc:Depends},
+	libartik-sdk-base,
+	libartik-sdk-systemio,
+	libartik-sdk-connectivity,
+	libartik-sdk-media,
+	libartik-sdk-bluetooth,
+	libartik-sdk-sensor,
+	libartik-sdk-wifi,
+	libartik-sdk-zigbee,
+	libartik-sdk-lwm2m,
+	libartik-sdk-mqtt,
+Description: Test programs to validate the ARTIK SDK.

@@ -1,0 +1,3 @@
+usr/include/artik/connectivity/*
+usr/lib/pkgconfig/libartik-sdk-connectivity.pc
+usr/lib/libartik-sdk-connectivity.so

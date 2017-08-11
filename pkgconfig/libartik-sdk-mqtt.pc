@@ -1,0 +1,13 @@
+prefix=/usr
+exec_prefix=/usr
+libdir=/usr/lib
+includedir=/usr/include/artik/mqtt
+version=1.4
+
+Name: ARTIK SDK MQTT
+Description: SDK MQTT Library for Samsung's ARTIK platforms
+URL: http://www.artik.io
+Version: ${version}
+Requires: libartik-sdk-base
+Libs: -L${libdir} -lartik-sdk-mqtt
+Cflags: -I${includedir}

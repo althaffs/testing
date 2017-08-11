@@ -1,0 +1,13 @@
+prefix=/usr
+exec_prefix=/usr
+libdir=/usr/lib
+includedir=/usr/include/artik/wifi
+version=1.4
+
+Name: ARTIK SDK Wifi
+Description: SDK Wifi Library for Samsung's ARTIK platforms
+URL: http://www.artik.io
+Version: ${version}
+Requires: libartik-sdk-base
+Libs: -L${libdir} -lartik-sdk-wifi
+Cflags: -I${includedir}

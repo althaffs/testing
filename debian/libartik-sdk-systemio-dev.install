@@ -1,0 +1,3 @@
+usr/include/artik/systemio/*
+usr/lib/pkgconfig/libartik-sdk-systemio.pc
+usr/lib/libartik-sdk-systemio.so

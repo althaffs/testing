@@ -1,0 +1,6 @@
+*.o
+build/
+doc/html/
+doc/latex
+*.swp
+.DS_Store

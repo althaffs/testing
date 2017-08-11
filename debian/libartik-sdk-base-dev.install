@@ -1,0 +1,3 @@
+usr/include/artik/base/*
+usr/lib/pkgconfig/libartik-sdk-base.pc
+usr/lib/libartik-sdk-base.so

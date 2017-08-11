@@ -1,0 +1,13 @@
+prefix=/usr
+exec_prefix=/usr
+libdir=/usr/lib
+includedir=/usr/include/artik/systemio
+version=1.4
+
+Name: ARTIK SDK System IO
+Description: SDK System IO Library for Samsung's ARTIK platforms
+URL: http://www.artik.io
+Version: ${version}
+Requires: libartik-sdk-base
+Libs: -L${libdir} -lartik-sdk-systemio
+Cflags: -I${includedir}

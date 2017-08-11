@@ -1,0 +1,3 @@
+usr/include/artik/zigbee/*
+usr/lib/pkgconfig/libartik-sdk-zigbee.pc
+usr/lib/libartik-sdk-zigbee.so

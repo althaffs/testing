@@ -1,0 +1,13 @@
+prefix=/usr
+exec_prefix=/usr
+libdir=/usr/lib
+includedir=/usr/include/artik/lwm2m
+version=1.4
+
+Name: ARTIK SDK LWM2M
+Description: SDK LWM2M Library for Samsung's ARTIK platforms
+URL: http://www.artik.io
+Version: ${version}
+Requires: libartik-sdk-base
+Libs: -L${libdir} -lartik-sdk-lwm2m
+Cflags: -I${includedir}
